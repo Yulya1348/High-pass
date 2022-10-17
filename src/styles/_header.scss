@@ -1,0 +1,113 @@
+@import '_variables.scss';
+
+.header {
+    background-color: $backgroundDard;
+    padding: 0;
+    font-family: 'TTFirsNeue-Medium', sans-serif;
+
+    &__container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 15px 24px;
+        width: 100%;
+    }
+    &__burger {
+        display: none;
+    }
+    &__logo {
+        display: inline-block;
+        max-width: 190px;
+        height: 31px;
+    }
+    &__burger {
+        display: none;
+    }
+    &__burger-menu {
+        display: flex;
+        align-items: center;
+        margin-right: 52px;
+        min-width: 57.5%;
+    }
+    &__burger-nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__burger-list {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__burger-item {
+        display: inline-block;
+    }
+    &__burger-link {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 20.64px;
+        font-weight: 200;
+        color: $whiteText;
+        transition: color .3s ease-in-out;
+    }
+    &__burger-close, &__form, &__phone {
+        display: none;
+    }
+    &__search-btn {
+        display: block;
+    }
+    &__form {
+        position: absolute;
+        z-index: 6;
+        top: 17px;
+        right: 0;
+        display: inline-block;
+        width: 342px;
+        height: 33px;
+        background: #202020;
+        transform: translateX(-101%);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+    }
+    &__form__active {
+        padding-left: 9px;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+    }
+    &__form.in-active {
+        opacity: 0;
+        visibility: hidden;
+    }
+    &__search-btn.in-active {
+        opacity: 0;
+        visibility: hidden;
+    }
+    &__input {
+        display: inline-block;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 0;
+        width: 83%;
+        height: 22px;
+        font-family: 'TTFirsNeue', sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+        caret-color: #fff;
+        background: inherit;
+        transition: border-bottom .2s ease-in-out;
+    }
+    .colortext {
+        background-color: #202020;
+        color: #fff;
+    }
+}

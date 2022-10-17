@@ -1,0 +1,269 @@
+:root {
+    --orangeColor: #FF6E30;
+    --dark-orangeColor: #BC572B;
+    --brightOrange: #CE4307;
+}
+
+@media (min-width: 1200px) {
+    .header__burger-link:hover:not(:focus-visible) {
+       color: var(--orangeColor);
+    }
+    .header__search-btn svg path,
+    .header__btn-close svg circle,
+    .section-contacts__btn-close:hover svg circle,
+    .section-contacts__arrow svg path {
+        transition: fill .3s ease-in-out;
+    }
+    .header__search-btn:hover svg path, .header__btn-close:hover svg circle {
+        fill: var(--orangeColor);
+    }
+    .btn:hover {
+        background-color: var(--dark-orangeColor);
+    }
+    .section-project__btn:hover {
+        background-color: var(--orangeColor);
+    }
+    .section-about__input:hover::-webkit-input-placeholder {
+        color: var(--orangeColor);
+    }
+    .section-about__input:hover::-moz-placeholder {
+        color: var(--orangeColor);
+    }
+    .section-contacts__input:hover::-webkit-input-placeholder {
+        color: var(--orangeColor);
+    }
+    .section-contacts__input:hover::-moz-placeholder {
+        color: var(--orangeColor);
+    }
+    .section-contacts__btn-close:hover svg circle, .section-contacts__arrow:hover svg path {
+        fill: var(--orangeColor);
+    }
+    .section-contacts__phone:hover {
+        color: var(--orangeColor);
+    }
+    .section-contacts__phone svg path {
+        transition: fill .3s ease-in-out;
+    }
+    .section-contacts__phone:hover svg path {
+        fill: var(--orangeColor);
+    }
+    .footer__social-link svg path {
+        transition: fill .3s ease-in-out;
+    }
+    .footer__social-item:hover .footer__social-link svg path {
+        fill: var(--orangeColor);
+    }
+}
+
+.header__burger-link::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: -6px;
+    right: -6px;
+    top: -6px;
+    bottom: -6px;
+    background-color: #BC572B;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.header__burger-link:focus-visible::before {
+    opacity: 1;
+}
+
+.header__phone::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: -6px;
+    right: -6px;
+    top: -6px;
+    bottom: -6px;
+    color: #fff;
+    background-color: #BC572B;
+    opacity: 0;
+}
+
+.header__phone:focus-visible::before {
+    opacity: 1;
+}
+
+.header__phone:active {
+    color: var(--brightOrange);
+}
+
+.header__phone:active svg path {
+    fill: var(--brightOrange);
+}
+
+.header__form:focus-visible .header__input {
+    border-bottom: 1px solid var(--orangeColor);
+}
+
+.header__search-btn:focus-visible svg path, 
+.header__btn-close:focus-visible svg circle, 
+.section-contacts__btn-close:focus-visible svg circle, 
+.section-contacts__arrow:focus-visible svg path {
+    fill: var(--dark-orangeColor);
+}
+
+.header__search-btn:active svg path,
+.header__btn-close:active svg circle,
+.section-contacts__btn-close:active svg circle,
+.section-contacts__arrow:active svg path {
+    fill: var(--brightOrange);
+}
+
+.section-contacts__phone::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: -6px;
+    right: -6px;
+    top: -6px;
+    bottom: -6px;
+    background-color: #BC572B;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.section-contacts__phone:focus-visible::before {
+    opacity: 1;
+}
+
+.section-contacts__phone:active {
+    color: var(--brightOrange);
+}
+
+.section-contacts__phone:active svg path {
+    fill: var(--brightOrange);
+}
+
+.header__form:focus-within .header__input {
+    border-bottom: 1px solid var(--brightOrange);
+}
+
+.header__input:focus-within::placeholder {
+    color: transparent;
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    top: -3px;
+    border: 3px solid var(--dark-orangeColor);
+    background-color: var(--orangeColor);
+    color: #fff;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.btn:focus-visible:before {
+    opacity: 1;
+}
+
+.btn:active {
+    background-color: var(--brightOrange);
+}
+
+.section-about__input:focus-visible {
+    border: 1px solid var(--orangeColor);
+}
+
+.section-about__input:focus-within {
+    border: 1px solid transparent;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.section-project__btn:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    top: -3px;
+    border: 3px solid var(--orangeColor);
+    background-color: var(--dark-orangeColor);
+    color: #fff;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.section-project__btn:focus-visible:before {
+    opacity: 1;
+}
+
+.section-project__btn:active {
+    background-color: var(--brightOrange);
+    border: 3px solid var(--brightOrange);
+}
+
+.form__fields {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.just-validate-error-field {
+    border: 1px solid #F06666;
+}
+
+.just-validate-error-label {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #F06666;
+    font-size: 9px;
+}
+
+.section-contacts__input:focus-visible {
+    border: 1px solid var(--orangeColor);
+}
+
+.section-contacts__input:focus-within {
+    border: 1px solid transparent;
+    color: #202020;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.section-contacts__input-big:focus-within {
+    border: 1px solid transparent;
+    color: #202020;
+    font-family: 'TTFirsNeue', sans-serif;
+    font-size: 24px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.just-validate-success-field {
+    color: #202020;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.section-about__input.just-validate-success-field {
+    color: #fff;
+}
+
+.footer__social-link:focus-visible svg path {
+    fill: var(--dark-orangeColor);
+}
+
+.footer__social-link:active svg path {
+    fill: var(--brightOrange);
+}

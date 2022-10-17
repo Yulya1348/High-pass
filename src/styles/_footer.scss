@@ -1,0 +1,67 @@
+@import '_variables.scss';
+
+.footer {
+    padding: 24px 0 23px;
+    background: $backgroundDard;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        width: 34%;
+    }
+    &__logo {
+        display: inline-block;
+        margin-bottom: 4px;
+        width: 190px;
+        height: 31px;
+    }
+    &__trademark {
+        display: inline-block;
+        color: #E9E9E9;
+        font-family: 'TTFirsNeue-Medium', sans-serif;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
+    }
+    &__quotation, &__autor, &__right-subtitle {
+        color: $greyText;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+    &__autor {
+        display: inline-block;
+        color: #666;
+    }
+    &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+    }
+    &__right-subtitle {
+        display: block;
+        margin-bottom: 8px;
+    }
+    &__center {
+        width: 30%;
+        padding-right: 17px;
+    }
+    &__social-list {
+        display: flex;
+        justify-content: space-between;
+        min-width: 81px;
+    }
+    &__icon {
+        width: 30px;
+        height: 30px;
+    }
+    &__social-icon path {
+        transition: fill 0.2s linear;
+    }
+}
